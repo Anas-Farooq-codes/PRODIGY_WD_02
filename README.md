@@ -1,0 +1,2 @@
+# PRODIGY_WD_02
+ Welcome to the Stopwatch App! This project features a straightforward stopwatch application crafted using HTML, CSS, and JavaScript. While the focus is primarily on functionality and usability, this stopwatch provides accurate timekeeping capabilities for a variety of timing needs. With a clean and intuitive interface, users can easily start, pause, reset, restart, lap, and laps-reset. 
