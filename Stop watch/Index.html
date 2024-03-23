@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Favicon  -->
+
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+  <!-- GOOGLE FONTS  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+
+
+<!-- Title  -->
+
+<title>Stop Watch</title>
+
+<!-- External Css Files  -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<main>
+  <h1 class="h1">Stop Watch</h1>
+<div class="container">
+  <div class="timer-display">
+    00 : 00 : 00 : 00
+  </div>
+
+  <ul class="laps">
+
+
+  </ul>
+
+  <div class="action">
+    <button class="btn" id="startTimer" onclick="start()">
+      Start
+    </button>
+    <button class="btn" id="pauseTimer" onclick="pause()">
+     Pause
+    </button>
+    <button class="btn" id="Reset" onclick="reset()">
+      Reset
+     </button>
+     <button class="btn" id="restartTimer" onclick="restart()">
+      Restart
+     </button>
+     <button class="btn" id="lap" onclick="lap()">
+      Lap
+     </button>
+     <button class="btn" id="resetLaps" onclick="resetLap()"> 
+      Reset Laps
+     </button>
+  </div>
+</div>
+</main>  
+
+<script src="script.js"></script>
+
+</body>
+</html>

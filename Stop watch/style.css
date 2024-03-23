@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after{
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+font-family: sans-serif;
+color: aliceblue;
+font-weight: 700;
+}
+
+
+
+
+
+  body {
+    background-image: url('Bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh; 
+overflow: hidden;
+  }
+
+
+
+li{
+  list-style: none;
+  color:  hsla(0, 0%, 100%, 0.6);
+}
+
+.laps li {
+  margin-bottom: 10px;
+  
+}
+
+h1{
+  font-size: 4rem;
+  text-align: center;
+  margin-block-start: 50px;
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.container {
+  width: 40%;
+  min-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color:  hsla(259, 61%, 14%, 1);
+  padding-bottom: 60px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  box-shadow: rgba(0,0,0,0.4) 0px 2px 4px,  rgba(0,0,0,0.3) 0px 7px 13px -3px,  rgba(0,0,0,0.2) 0px -3px 0px inset;
+}
+
+.timer-display{
+  color: hsla(0, 0%, 100%, 0.8);
+  background-color:  hsla(259, 61%, 14%, 1);
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border-radius: 30px 30px 0 0;
+  -webkit-border-radius: 30px 30px 0 0;
+  -moz-border-radius: 30px 30px 0 0;
+  -ms-border-radius: 30px 30px 0 0;
+  -o-border-radius: 30px 30px 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.laps {
+
+  text-align: center;
+  color: aliceblue;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.action {
+
+  width: 85%;
+  margin: 60px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.action button{
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.3rem;
+}
+
+
+
+/* Btn styling  */
+
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+
+@media (max-width: 470px) {
+  .container {
+    width: 100%; 
+  }
+}
